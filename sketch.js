@@ -11,7 +11,7 @@ Plequationstate =0 ,SIntereststate=0, Spherestate=0, Trapeziumstate=0, Rectstate
 
 
 function preload (){
-   bg = loadImage("maths background.jpg")
+   bg = loadImage("bg.jpg")
 }
 function setup(){   
     canvas = createCanvas(windowWidth- 30, windowHeight *2);

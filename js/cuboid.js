@@ -1,42 +1,49 @@
-function setup(){
-    Text1 = createElement("h3");
-    Text1.html("Area and Volume Calculator");
-    Text1.position(displayWidth/2+100,100);
-    Text2 = createP("");
-    Text2.html("Enter Value of Length(no unit)");
-    Text2.position(displayWidth/2+100,175);
-    length1 = createInput("");
-    length1.position(displayWidth/2+200,270);
-    Text3 = createP("");
-    Text3.html("Enter Value of Breadth(no unit)");
-    Text3.position(displayWidth/2+100,345);
-    breadth = createInput("");
-    breadth.position(displayWidth/2+200,410);
-    Text4 = createP("");
-    Text4.html("Enter Value of Height(no unit)");
-    Text4.position(displayWidth/2+100,475);
-    height = createInput("");
-    height.position(displayWidth/2+200,550);
-    TsareaAns = createElement("h4");
-    TsareaAns.position(displayWidth/2,620);
-    LsareaAns = createElement("h4");
-    LsareaAns.position(displayWidth/2,670);
-    VolumeAns = createElement("h4");
-    VolumeAns.position(displayWidth/2,720);
-    DiagonalAns = createElement("h4");
-    DiagonalAns.position(displayWidth/2,770);
+class CuboidClass{
+    constructor()
+    {
+    this.Text1 = createElement("h1");
+    this.Text1.html("Cuboid -Area and Volume Calculator");
+    this.Text1.position(windowWidth/3.5,windowHeight/1.2);
+    this.Text2 = createElement("h2");
+    this.Text2.html("Enter Value of Length");
+    this.Text2.position(windowWidth/10,windowHeight);
+    this.length1 = createInput("");
+    this.length1.position(windowWidth/10,windowHeight*10/9);
+    this.Text3 = createElement("h2");
+    this.Text3.html("Enter Value of Breadth");
+    this.Text3.position(windowWidth/2.5,windowHeight);
+    this.breadth = createInput("");
+    this.breadth.position(windowWidth/2.5,windowHeight*10/9);
+    this.Text4 = createElement("h2");
+    this.Text4.html("Enter Value of Height");
+    this.Text4.position(windowWidth/1.4,windowHeight);
+    this.height = createInput("");
+    this.height.position(windowWidth/1.4,windowHeight*10/9);
+    this.TsareaAns = createElement("h2");
+    this.TsareaAns.position(windowWidth/80,windowHeight*1.4);
+    this.LsareaAns = createElement("h2");
+    this.LsareaAns.position(windowWidth/80,windowHeight*1.5);
+    this.VolumeAns = createElement("h2");
+    this.VolumeAns.position(windowWidth/80,windowHeight*1.6);
+    this.DiagonalAns = createElement("h2");
+    this.DiagonalAns.position(windowWidth/5,windowHeight*1.3);
 }
-function draw(){
-    lengthAns = length1.value();
-    breadthAns = breadth.value();
-    heightAns = height.value();
-    Tsarea = 2* lengthAns*breadthAns+2* lengthAns*heightAns+2* heightAns*breadthAns;
-    TsareaAns.html("Total Surface Area: "+ Tsarea + " unit square");
-    Lsarea = 2*heightAns*(1*lengthAns+1*breadthAns)
-    LsareaAns.html("Lateral Surface Area: "+ Lsarea + " unit square");
-    Volume = lengthAns* breadthAns* heightAns;
-    VolumeAns.html("Volume: "+ Volume + " cubic unit");
-    Diagonal = Math.sqrt(1*lengthAns*lengthAns+1*breadthAns*breadthAns+1*heightAns*heightAns)
-    DiagonalAns.html("Diagonal: "+ Diagonal + " units");
+loop(){
+    var lengthAns = this.length1.value();
+    var breadthAns = this.breadth.value();
+    var heightAns = this.height.value();
+    var Tsarea = 2* lengthAns*breadthAns+2* lengthAns*heightAns+2* heightAns*breadthAns;
+    this.TsareaAns.html("Total Surface Area: "+ Tsarea + " unit square");
+    var Lsarea = 2*heightAns*(1*lengthAns+1*breadthAns)
+    this.LsareaAns.html("Lateral Surface Area: "+ Lsarea + " unit square");
+    var Volume = lengthAns* breadthAns* heightAns;
+    this.VolumeAns.html("Volume: "+ Volume + " cubic unit");
+    var Diagonal = Math.sqrt(1*lengthAns*lengthAns+1*breadthAns*breadthAns+1*heightAns*heightAns)
+    this.DiagonalAns.html("Diagonal: "+ Diagonal + " units");
+    textSize(25);
+    fill("red");
+    text("Refresh the page to select a different calculator.", windowWidth/10, windowHeight*1.8)
+    text("Note : Enter only numbers.", windowWidth/10, windowHeight*1.9)
 
+}
 }

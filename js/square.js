@@ -1,23 +1,32 @@
-function setup(){
-    Text1 = createP("");
-    Text1.html("Area and Perimeter Calculator(Enter only value no unit)");
-    Text1.position(displayWidth/4,displayHeight-50);
-    Text2 = createP("");
-    Text2.html("Enter Value of Side");
-    Text2.position(displayWidth/4,displayHeight+25);
-    SideI = createInput("");
-    SideI.position(displayWidth/4,displayHeight+100);
-    areaAns = createElement("h4");
-    areaAns.position(displayWidth/4,displayHeight+125);
-    perimeterAns = createElement("h4");
-    perimeterAns.position(displayWidth/4,displayHeight+175);
-}
-function draw(){
-    side = SideI.value();
-    area = side * side;
-    perimeter = side *4;
-    areaAns.html("Area: "+ area + " unit square");
-    perimeterAns.html("Perimeter: "+ perimeter + " units");
-    console.log("Area: " + area)
+class SquareClass{
+    constructor()
+    {
+    this.Text1 = createElement("h1");
+    this.Text1.html("Square-Area and Perimeter Calculator");
+    this.Text1.position(windowWidth/5,windowHeight/1.2);
+    this.Text2 = createElement("h3");
+    this.Text2.html("Enter Value of Side");
+    this.Text2.position(windowWidth/4.5,windowHeight);
+    this.SideI = createInput("");
+    this.SideI.position(windowWidth/3.5,windowHeight*10/9);
+    this.areaAns = createElement("h2");
+    this.areaAns.position(windowWidth/5,windowHeight*1.2);
+    this.perimeterAns = createElement("h2");
+    this.perimeterAns.position(windowWidth/5,windowHeight*1.3);
 
+}
+loop(){
+    
+    var side = this.SideI.value();
+    var area = side * side;
+    var perimeter = side *4;
+    this.areaAns.html("Area: "+ area + " unit²");
+    this.perimeterAns.html("Perimeter: "+ perimeter + " units");
+    
+    textSize(25);
+    fill("red");
+    text("Refresh the page to select a different calculator.", windowWidth/10, windowHeight*1.5)
+    text("Note : Enter only numbers.", windowWidth/10, windowHeight*1.6)
+
+}
 }

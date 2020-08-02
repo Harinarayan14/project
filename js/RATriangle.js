@@ -36,7 +36,6 @@ class RATriangleClass{
     
     textSize(25);
     fill("red");
-    text("Refresh the page to select a different calculator.", windowWidth/10, windowHeight*1.7)
     text("Note : Enter only numbers.", windowWidth/10, windowHeight*1.8)
 
     }

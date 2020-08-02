@@ -34,8 +34,5 @@ class ap {
         this.nthTermAns.html("n<sup>th</sup> term: "+ nthTermval);
         this.SumAns.html("Sum of n terms: "+ sumval ); 
        
-    textSize(25);
-    fill("red");
-    text("Refresh the page to select a different calculator.", windowWidth/10, windowHeight*1.6)
          }
 }

@@ -33,10 +33,6 @@ loop(){
     var Amount = 1*Interest + 1*principalAns;
     this.AmountAns.html("Amount: ₹"+ Amount );
       
-    textSize(25);
-    fill("red");
-    text("Refresh the page to select a different calculator.", windowWidth/10, windowHeight*1.6)
-        
 
 }
 }

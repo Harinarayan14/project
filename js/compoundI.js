@@ -28,8 +28,6 @@ class CIclass {
         textSize(25);
         text("Compound Interest: ₹"+ Interest,windowWidth/5,windowHeight*1.3 )
         text("Amount: ₹"+ Amount ,windowWidth/5,windowHeight*1.4 )
-        fill("red");
-        text("Refresh the page to select a different calculator.", windowWidth/10, windowHeight*1.6)
 
     }
 }

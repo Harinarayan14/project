@@ -33,10 +33,6 @@ class GPClass{
         this.nthTermAns.html("nth term:"+ nthTerm );
         this.SumAns.html("Sum of n terms:"+ Sum );
           
-    textSize(25);
-    fill("red");
-    text("Refresh the page to select a different calculator.", windowWidth/10, windowHeight*1.5)
-        
 
     }
 }

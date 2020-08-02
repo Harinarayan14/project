@@ -1,5 +1,5 @@
 var SquareB, RectB, TriangleB, CircleB, TrapeziumB, ParallelogramB, CubeB, CuboidB, SphereB,
- CylinderB,ConeB, HemisphereB, SInterestB , CInterestB , APB , GPB , QequationB, PLequationB;
+ CylinderB,ConeB, HemisphereB, SInterestB , CInterestB , APB , GPB , QequationB, PLequationB, ReloadB;
  
  var trianglePressed = false;
 
@@ -11,12 +11,14 @@ Plequationstate =0 ,SIntereststate=0, Spherestate=0, Trapeziumstate=0, Rectstate
 
 
 function preload (){
-   bg = loadImage("maths background.jpg")
+   bg = loadImage("bg.jpg")
 }
 function setup(){   
     canvas = createCanvas(windowWidth- 30, windowHeight *2);
     SquareB = createButton("Square");
     SquareB.position(windowWidth/10,windowHeight/3.4);
+    ReloadB = createButton("Change Calculator");
+    ReloadB.position(windowWidth/1.3,windowHeight/1.7);
     RectB = createButton("Rectangle");
     RectB.position(windowWidth/10,windowHeight/3.03);
     TriangleB = createButton("Triangle");
@@ -187,74 +189,98 @@ function draw(){
         APB.mousePressed(()=>{
             APstate = 1;
             ap1 = new ap();
+            APB.style("border","solid")
+            
         })
         CircleB.mousePressed(()=>{
             Circlestate = 1;
             Circle1 = new circleClass();
+            CircleB.style("border","solid")
         })
         CInterestB.mousePressed(()=>{
             CompoundIstate = 1;
             CompoundI1 = new CIclass();
+            CInterestB.style("border","solid")
         })
         ConeB.mousePressed(()=>{
             Conestate = 1;
             Cone1 = new ConeClass();
+            ConeB.style("border","solid")
         })
         CubeB.mousePressed(()=>{
             Cubestate = 1;
             Cube1 = new CubeClass();
+            CubeB.style("border","solid")
         })
         CuboidB.mousePressed(()=>{
             Cuboidstate = 1;
             Cuboid1 = new CuboidClass();
+            CuboidB.style("border","solid")
         })
         CylinderB.mousePressed(()=>{
             Cylinderstate = 1;
             Cylinder1 = new CylinderClass();
+            CylinderB.style("border","solid")
         })
         GPB.mousePressed(()=>{
             GPstate = 1;
             GP1 = new GPClass();
+            GPB.style("border","solid")
         })
         HemisphereB.mousePressed(()=>{
             Hemispherestate = 1;
             Hemisphere1 = new HemisphereClass();
+            HemisphereB.style("border","solid")
         })
         ParallelogramB.mousePressed(()=>{
          Parallelogramstate = 1;
          Parallelogram1 = new ParallelogramClass();
+         ParallelogramB.style("border","solid")
         })
         PLequationB.mousePressed(()=>{
          Plequationstate = 1;
          Plequation1 = new PlequationClass();
+         PLequationB.style("border","solid")
         })
         QequationB.mousePressed(()=>{
          Qequationstate = 1;
          Qequation1 = new QequationClass();
+         QequationB.style("border","solid")
         })
         RectB.mousePressed(()=>{
          Rectstate = 1;
          Rect1 = new RectClass();
+         RectB.style("border","solid")
         })
         
         SquareB.mousePressed(()=>{
          Squarestate = 1;
          Square1 = new SquareClass();
+         SquareB.style("border","solid")
         })
         SInterestB.mousePressed(()=>{
          SIntereststate = 1;
          SInterest1 = new SInterestClass();
+         SInterestB.style("border","solid")
         })
         SphereB.mousePressed(()=>{
          Spherestate = 1;
          Sphere1 = new SphereClass();
+         SphereB.style("border","solid")
         })
         TrapeziumB.mousePressed(()=>{
          Trapeziumstate = 1;
          Trapezium1 = new TrapeziumClass();
+         TrapeziumB.style("border","solid")
         })    
         
-        TriangleB.mousePressed(()=>{
+        ReloadB.mousePressed(()=>{
+         ReloadB.style("border","solid")
+         location.reload();
+      })
+         TriangleB.mousePressed(()=>{
+            
+         TriangleB.style("border","solid")
          trianglePressed = true;
          RATriangleB.position(windowWidth/10,windowHeight/1.5);
          ITriangleB.position(windowWidth/3,windowHeight/1.5);
@@ -266,7 +292,8 @@ function draw(){
             RATriangle1 = new RATriangleClass();
             ITriangleB.hide();
             ETriangleB.hide();
-            STriangleB.hide();
+            RATriangleB.style("border","solid")
+         STriangleB.hide();
 
          })
          ITriangleB.mousePressed(()=>{
@@ -274,7 +301,8 @@ function draw(){
             ITriangle1 = new ITriangleClass();
             RATriangleB.hide();
             ETriangleB.hide();
-            STriangleB.hide();
+            ITriangleB.style("border","solid")
+         STriangleB.hide();
             
          })
          ETriangleB.mousePressed(()=>{
@@ -282,7 +310,8 @@ function draw(){
             ETriangle1 = new ETriangleClass();
             ITriangleB.hide();
             RATriangleB.hide();
-            STriangleB.hide();
+            ETriangleB.style("border","solid")
+         STriangleB.hide();
             
          })
          STriangleB.mousePressed(()=>{
@@ -290,8 +319,10 @@ function draw(){
             STriangle1 = new STriangleClass();
             ITriangleB.hide();
             ETriangleB.hide();
-            RATriangleB.hide();
+            STriangleB.style("border","solid")
+         RATriangleB.hide();
             
          })
+
         })   
      }

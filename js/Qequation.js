@@ -56,9 +56,6 @@ loop(){
         this.text.html("This quadratic equation has no real roots.");
     } 
       
-    textSize(25);
-    fill("red");
-    text("Refresh the page to select a different calculator.", windowWidth/10, windowHeight*1.6)
         
      }
 }
